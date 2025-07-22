@@ -15,6 +15,13 @@ public class StudentDAO {
         }
     }
 
+    /*Insert Student*/
+    public synchronized void addStudent(Student student) throws SQLException{
+        String sql = "INSERT INTO students (name, email, department) VALUES(?, ?, ?)";
+
+
+    }
+
 
 
 }

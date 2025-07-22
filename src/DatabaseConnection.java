@@ -9,7 +9,7 @@ public class DatabaseConnection {
     private static Connection connection;
 
     private DatabaseConnection() {}
-    private static synchronized Connection getConnection () throws SQLException {
+    public static synchronized Connection getConnection () throws SQLException {
         if (connection == null || connection.isClosed()) {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
